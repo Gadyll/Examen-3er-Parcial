@@ -1,0 +1,310 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background-color: #2c3e50; /* Fondo del cuerpo */
+}
+
+.container {
+    background: linear-gradient(to bottom, #3498db 50%, #2c3e50 50%);
+    display: flex;
+    width: 90%;
+    height: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.left {
+    border-radius: 20px 0 50px 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #3498db;
+    color: white; /* Texto blanco para contraste */
+}
+
+.imagen-redonda {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.right {
+    border-radius: 20px 20px 20px 0;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(150deg, #2c3e50, #3498db);
+    color: white; /* Texto blanco para contraste */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 10px;
+    background: #2c3e50;
+    border-radius: 20px;
+    padding: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    color: white; /* Texto blanco para contraste */
+}
+
+.Formulario {
+    width: 80%;
+}
+
+.Formulario h1 {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid silver;
+}
+
+.Formulario form {
+    padding: 0 20px;
+}
+
+.form-section {
+    position: relative;
+    margin: 30px 0;
+}
+
+.form-section i {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #3498db; /* Color de los íconos */
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.form-section input {
+    width: 100%;
+    padding: 15px 15px 15px 45px;
+    font-size: 16px;
+    border: 2px solid #adadad;
+    border-radius: 5px;
+    background: #e6f7f7;
+    outline: none;
+    color: #333;
+}
+
+input[type="submit"],
+button[type="submit"] {
+    width: 100%;
+    height: 50px;
+    border: none;
+    background: #3498db;
+    border-radius: 25px;
+    font-size: 18px;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+input[type="submit"]:hover,
+button[type="submit"]:hover {
+    transform: scale(1.05);
+    background: #2c3e50;
+    transition: .1s;
+}
+
+.registrarse {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.registrarse a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.registrarse a:hover {
+    text-decoration: underline;
+}
+
+label {
+    display: block;
+    margin: 15px 0;
+    text-align: left;
+    color: white; /* Texto blanco para contraste */
+}
+
+label input {
+    margin-right: 10px;
+}
+
+.parte-formulario {
+    display: none;
+    animation: slideInLeft 0.5s forwards;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.activo {
+    display: block !important;
+}
+
+select {
+    width: 100%;
+    padding: 11px;
+    font-size: 16px;
+    border: 2px solid #adadad;
+    background: none;
+    outline: none;
+    margin: 10px 0;
+}
+
+/* Estilos adicionales para las opciones de registro */
+.opciones-registro {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.opcion {
+    background-color: #3498db;
+    border: 1px solid #2c3e50;
+    border-radius: 10px;
+    padding: 20px;
+    width: 30%;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    color: white;
+}
+
+.opcion:hover {
+    transform: scale(1.05);
+}
+
+.opcion img {
+    width: 100px;
+    height: 100px;
+}
+
+.opcion h3 {
+    margin: 10px 0;
+}
+
+.opcion p {
+    font-size: 14px;
+}
+
+button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: #3498db;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background: #2c3e50;
+}
+
+button i {
+    margin-left: 10px;
+}
+
+button i.fa-arrow-left {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+.sexo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sexo-option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.sexo-option input {
+    margin-right: 10px;
+}
+
+/* Estilos para el mensaje de error */
+.error {
+    color: #ff0000;
+    background-color: #ffe6e6;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ff0000;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Estilos para la alerta */
+.alerta {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #f44336;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alerta.success {
+    background-color: #4CAF50;
+}
+
+.alerta .alerta-contenido {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.alerta button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 20px;
+}

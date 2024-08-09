@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/index2.css?v=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title> Trastornos del Sueño</title>
+    <script src="JS/index2.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="imagenes/logo.jpg" alt="Logo" />
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index2.html">Inicio</a></li>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                    <li><a href="login.html">Iniciar sesión</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">Registrar</a>
+                        <div class="dropdown-content">
+                            <a href="registro.html">Registrar gratis</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <div class="search-icon" onclick="toggleSearch()">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Buscar especialistas..." oninput="buscarEspecialistas()">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    
+    <section class="doctors-grid">
+        <div class="container">
+            <div class="doctor-card" onclick="redirectToSpecialist('luis-fernando-espinosa-peraldi')">
+                <img src="imagenes/doctor1.jpg" alt="Doctor 1">
+                <div class="doctor-info">
+                    <h4>Luis Fernando Espinosa Peraldi</h4>
+                    <p>Ophthalmologist</p>
+                    <p><strong>Dirección:</strong> Calle El Vergel 239, Querétaro</p>
+                    <p><strong>Primera visita:</strong> Medicina Complementaria y Alternativa - $750</p>
+                    <div class="doctor-availability">
+                        <p><strong>En línea:</strong> Consulta en línea - $800</p>
+                    </div>
+                    <a href="https://www.google.com/maps" class="more-hours">Mapa</a>
+                </div>
+            </div>
+            <div class="doctor-card" onclick="redirectToSpecialist('lic-ana-corina-ballesteros')">
+                <img src="imagenes/doctor2.jpg" alt="Doctor 2">
+                <div class="doctor-info">
+                    <h4>Lic. Ana Corina Ballesteros</h4>
+                    <p>Cardiologist</p>
+                    <p><strong>Dirección:</strong> Calle El Vergel 239, Querétaro</p>
+                    <p><strong>Primera visita:</strong> Medicina Complementaria y Alternativa - $750</p>
+                    <div class="doctor-availability">
+                        <p><strong>En línea:</strong> Consulta en línea - $800</p>
+                    </div>
+                    <a href="https://www.google.com/maps" class="more-hours">Mapa</a>
+                </div>
+            </div>
+            <div class="doctor-card" onclick="redirectToSpecialist('lic-valeria-slusar')">
+                <img src="imagenes/doctor3.jpg" alt="Doctor 3">
+                <div class="doctor-info">
+                    <h4>Lic. Valeria Slusar</h4>
+                    <p>Psicólogo</p>
+                    <p><strong>Dirección:</strong> Campo Real 1606, Querétaro</p>
+                    <p><strong>Primera visita:</strong> Primera visita Psicología - $700</p>
+                    <div class="doctor-availability">
+                        <p><strong>En línea:</strong> Consulta en línea - $600</p>
+                    </div>
+                    <a href="https://www.google.com/maps" class="more-hours">Mapa</a>
+                </div>
+            </div>
+            <div class="doctor-card" onclick="redirectToSpecialist('dr-maritza-sandoval-rincon')">
+                <img src="imagenes/doctor4.jpg" alt="Doctor 4">
+                <div class="doctor-info">
+                    <h4>Maritza Sandoval Rincón</h4>
+                    <p>Psiquiatra</p>
+                    <p><strong>Dirección:</strong> Ciruelos 137, Jurica Pinar. Interior 109, Querétaro</p>
+                    <p><strong>Primera visita:</strong> Medicina Complementaria y Alternativa - $1,000</p>
+                    <div class="doctor-availability">
+                        <p><strong>En línea:</strong> Consulta en línea - $1,000</p>
+                    </div>
+                    <a href="https://www.google.com/maps" class="more-hours">Mapa</a>
+                </div>
+            </div>
+            <div class="doctor-card" onclick="redirectToSpecialist('mtra-mariela-eula')">
+                <img src="imagenes/doctor5.jpg" alt="Doctor 5">
+                <div class="doctor-info">
+                    <h4>Mtra. Mariela Eula</h4>
+                    <p>Terapeuta complementario</p>
+                    <p><strong>Dirección:</strong> Licenciado Zacarías Oñate 20, Querétaro</p>
+                    <p><strong>Primera visita:</strong> $750</p>
+                    <div class="doctor-availability">
+                        <p><strong>En línea:</strong> Consulta psicológica online - $700</p>
+                    </div>
+                    <a href="https://www.google.com/maps" class="more-hours">Mapa</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="map">
+        <div class="container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3732.249823706356!2d-100.39178338454833!3d20.5887933862095!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d342b59c65c799%3A0x4c49fef1c170d2b8!2sQuer%C3%A9taro%2C%20Qro.%2C%20M%C3%A9xico!5e0!3m2!1ses-419!2sus!4v1624023242342!5m2!1ses-419!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="container">
+            <h2>Testimonios</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial-card">
+                    <p class="quote">"Excelente atención y resultados inmediatos!"</p>
+                    <p class="author">- Juan Pérez</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Muy recomendable, profesionales y amables."</p>
+                    <p class="author">- María López</p>
+                </div>
+                <div class="testimonial-card">
+                    <p class="quote">"Recibí un servicio increíble, definitivamente volveré."</p>
+                    <p class="author">- Luis Gómez</p>
+                </div>
+            </div>
+        </div>
+    </section>    
+        
+    
+    <footer>
+        <div class="container">
+            <div class="footer-block">
+                <h4>Conócenos</h4>
+                <p><a href="Nosotros.html">Quiénes somos</a></p>
+                <p><a href="#">Nuestra Historia</a></p>
+                <p><a href="#">Misión y Visión</a></p>
+                <p><a href="#">Equipo</a></p>
+            </div>
+            <div class="footer-block">
+                <h4>Servicios</h4>
+                <p><a href="#">Consultas Médicas</a></p>
+                <p><a href="#">Laboratorio Clínico</a></p>
+                <p><a href="#">Especialidades Médicas</a></p>
+                <p><a href="#">Atención Domiciliaria</a></p>
+            </div>
+            <div class="footer-block">
+                <h4>Atención</h4>
+                <p>Teléfono: +52 123 456 7890</p>
+                <p>Email: info@salud-digna.com</p>
+                <p>Horario: Lunes a Viernes 9:00 am - 7:00 pm</p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+        <div class="newsletter">
+            <h4>Suscríbete a Nuestro Boletín</h4>
+            <form>
+                <input type="email" placeholder="Tu correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+        <p>&copy; 2024 Salud Digna. Todos los derechos reservados.</p>
+    </footer>
+    
+    
+
+    <script src="JS/index2.js"></script>
+</body>
+</html>

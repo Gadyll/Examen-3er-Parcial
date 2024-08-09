@@ -1,0 +1,141 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    background-color: #06075a;
+    color: white;
+    padding: 10px 0;
+}
+
+.menu .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu .logo img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-left: 20px; /* Añadir margen izquierdo para separar el logo del borde */
+}
+
+.navbar {
+    margin-left: auto; /* Mueve la barra de navegación a la derecha */
+    margin-right: 20px; /* Añadir margen derecho para separar la barra de navegación de la barra de búsqueda */
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    text-decoration: underline;
+}
+
+.search-form {
+    display: flex;
+    align-items: center;
+    margin-right: 20px; /* Añadir margen derecho */
+}
+
+.search-form input {
+    padding: 5px;
+    border: none;
+    border-radius: 3px 0 0 3px;
+}
+
+.search-form button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 0 3px 3px 0;
+    cursor: pointer;
+}
+
+.avatar-nav {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    object-fit: cover;
+    margin-left: 20px;
+}
+
+.doctors-list .container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.doctors-list h1 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.doctor-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.doctor-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+}
+
+.doctor-card h3 {
+    margin: 10px 0;
+}
+
+.doctor-card p {
+    margin: 10px 0;
+    color: #555;
+}
+
+.doctor-card a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.doctor-card a:hover {
+    background-color: #0056b3;
+}

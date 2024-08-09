@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/registro.css">
+    <link rel="stylesheet" href="CSS/estilo.css">
+    <title>Registro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="JS/registro.js"></script>
+</head>
+<body>
+    <div id="contenedor"></div>
+    <div class="container">
+        <div class="left">
+            <img src="imagenes/registro.jpg" alt="Descripción de la imagen" class="imagen-redonda">
+        </div>        
+        <div class="right">
+            <div class="content">
+                <!-- Selección de tipo de usuario -->
+                <div class="Formulario parte-formulario activo" id="parte1">
+                    <h1>¿Qué tipo de perfil quieres registrar?</h1>
+                    <div class="opciones-registro">
+                        <div class="opcion" onclick="mostrarFormularioEspecifico('paciente')">
+                            <i class="fa-solid fa-user"></i>
+                            <h3>Paciente</h3>
+                        </div>
+                        <div class="opcion" onclick="mostrarFormularioEspecifico('doctor')">
+                            <i class="fa-solid fa-user-doctor"></i>
+                            <h3>Doctor</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulario de Paciente -->
+                <form id="formPaciente" method="post" action="registro.php" onsubmit="return validarFormulario('formPaciente')">
+                    <input type="hidden" name="tipo_usuario" value="1"> <!-- Asumimos que el ID del tipo de usuario paciente es 1 -->
+                    <input type="hidden" name="rol" value="1"> <!-- Asumimos que el ID del rol paciente es 1 -->
+
+                    <div class="Formulario parte-formulario" id="parte2Paciente">
+                        <h1>Registro Paciente</h1>
+                        <div class="form-section">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="nombre" id="nombrePaciente" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-section">
+                            <i class="fa-solid fa-user"></i>
+                            <input type="text" name="apellido" id="apellidoPaciente" placeholder="Apellido" required>
+                        </div>
+                        <div class="form-section">
+                            <i class="fa-solid fa-envelope"></i>
+                            <input type="text" name="correo" id="correoPaciente" placeholder="Correo Electrónico" required>
+                        </div>
+                        <div class="form-section">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="text" name="telefono" id="telefonoPaciente" placeholder="Número de Teléfono" required>
+                        </div>
+                        <button type="button" onclick="mostrarParte('parte2Paciente', 'parteSexoPaciente')">Siguiente</button>
+                    </div>                    
+
+                    <div class="Formulario parte-formulario" id="parteSexoPaciente">
+                        <h1>Registro Paciente</h1>
+                        
+                            <label>Sexo:</label>
+                            <div class="sexo-option">
+                                <input type="radio" id="sexoMujerPaciente" name="sexo" value="2" required>
+                                <label for="sexoMujerPaciente"><i class="fa-solid fa-person-dress"></i> Mujer</label>
+                            </div>
+                            <div class="sexo-option">
+                                <input type="radio" id="sexoHombrePaciente" name="sexo" value="1" required>
+                                <label for="sexoHombrePaciente"><i class="fa-solid fa-person"></i> Hombre</label>
+                            </div>
+                        <div class="form-section">
+                            <label for="fechaNacimientoPaciente">Fecha de Nacimiento:</label>
+                            <input type="date" id="fechaNacimientoPaciente" name="fecha_nacimiento" required>
+                        </div>
+                        <button type="button" onclick="mostrarParte('parteSexoPaciente', 'parteCiudadEstadoPaciente')">Siguiente</button>
+                    </div>
+
+                    <div class="Formulario parte-formulario" id="parteCiudadEstadoPaciente">
+                        <h1>Registro Paciente</h1>
+                        <div class="form-section">
+                            <label for="estado">Estado</label>
+                            <select id="estadoPaciente" name="estado" required>
+                                <option value="1">Querétaro</option>
+                            </select>
+                        </div>
+                        <div class="form-section">
+                            <label for="ciudad">Ciudad</label>
+                            <select id="ciudadPaciente" name="ciudad" required>
+                                <option value="1">Querétaro</option>
+                                <option value="2">San Juan del Río</option>
+                                <option value="3">El Marqués</option>
+                                <option value="4">Corregidora</option>
+                                <option value="5">Tequisquiapan</option>
+                                <option value="6">Colón</option>
+                                <option value="7">Cadereyta de Montes</option>
+                                <option value="8">Ezequiel Montes</option>
+                                <option value="9">Pedro Escobedo</option>
+                                <option value="10">Jalpan de Serra</option>
+                                <option value="11">Peñamiller</option>
+                                <option value="12">Amealco de Bonfil</option>
+                                <option value="13">Tolimán</option>
+                                <option value="14">Pinal de Amoles</option>
+                                <option value="15">San Joaquín</option>
+                                <option value="16">Arroyo Seco</option>
+                                <option value="17">Landa de Matamoros</option>
+                                <option value="18">Huimilpan</option>
+                            </select>
+                        </div>
+                        <button type="button" onclick="mostrarParte('parteCiudadEstadoPaciente', 'parteContrasenaPaciente')">Siguiente</button>
+                    </div>
+
+                    <div class="Formulario parte-formulario" id="parteContrasenaPaciente">
+                        <h1>Registro Paciente</h1>
+                        <div class="form-section">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" name="contrasena" id="contrasenaPaciente" placeholder="Contraseña" required>
+                        </div>
+                        <button type="submit">Registrar Paciente</button>
+                    </div>
+                </form>
+
+                <!-- Formulario de Doctor -->
+                <form id="formDoctor" method="post" action="registro.php" onsubmit="return validarFormulario('formDoctor')">
+                    <input type="hidden" name="tipo_usuario" value="2"> <!-- Asumimos que el ID del tipo de usuario doctor es 2 -->
+                    <input type="hidden" name="rol" value="2"> <!-- Asumimos que el ID del rol doctor es 2 -->
+
+                    <div class="Formulario parte-formulario" id="parte2Doctor">
+                        <h1>Registro Doctor</h1>
+                        <div class="form-section">
+                            <i class="fa-solid fa-user-doctor"></i>
+                            <input type="text" name="nombre" id="nombreDoctor" placeholder="Nombre" required>
+                        </div>
+                        <div class="form-section">
+                            <i class="fa-solid fa-user-doctor"></i>
+                            <input type="text" name="apellido" id="apellidoDoctor" placeholder="Apellido" required>
+                        </div>
+                        <div class="form-section">
+                            <i class="fa-solid fa-envelope" ></i>
+                            <input type="email" name="correo" id="correoDoctor" placeholder="Correo Electrónico" required>
+                        </div>
+                        <div class="form-section">
+                            <i class="fa-solid fa-phone"></i>
+                            <input type="text" name="telefono" id="telefonoDoctor" placeholder="Número de Teléfono" required>
+                        </div>
+                        <button type="button" onclick="mostrarParte('parte2Doctor', 'parteSexoDoctor')">Siguiente</button>
+                    </div>
+
+                    <div class="Formulario parte-formulario" id="parteSexoDoctor">
+                        <h1>Registro Doctor</h1>
+                        
+                            <label>Sexo:</label>
+                            <div class="sexo-option">
+                                <input type="radio" id="sexoMujerDoctor" name="sexo" value="2" required>
+                                <label for="sexoMujerDoctor"><i class="fa-solid fa-person-dress"></i> Mujer</label>
+                            </div>
+                            <div class="sexo-option">
+                                <input type="radio" id="sexoHombreDoctor" name="sexo" value="1" required>
+                                <label for="sexoHombreDoctor"><i class="fa-solid fa-person"></i> Hombre</label>
+                            </div>
+                        <div class="form-section">
+                            <label for="fechaNacimientoDoctor">Fecha de Nacimiento:</label>
+                            <input type="date" id="fechaNacimientoDoctor" name="fecha_nacimiento" required>
+                        </div>
+                        <button type="button" onclick="mostrarParte('parteSexoDoctor', 'parteCiudadEstadoDoctor')">Siguiente</button>
+                    </div>
+
+                    <div class="Formulario parte-formulario" id="parteCiudadEstadoDoctor">
+                        <h1>Registro Doctor</h1>
+                        <div class="form-section">
+                            <label for="estado">Estado</label>
+                            <select id="estadoDoctor" name="estado" required>
+                                <option value="1">Querétaro</option>
+                            </select>
+                        </div>
+                        <div class="form-section">
+                            <label for="ciudad">Ciudad</label>
+                            <select id="ciudadDoctor" name="ciudad" required>
+                                <option value="1">Querétaro</option>
+                                <option value="2">San Juan del Río</option>
+                                <option value="3">El Marqués</option>
+                                <option value="4">Corregidora</option>
+                                <option value="5">Tequisquiapan</option>
+                                <option value="6">Colón</option>
+                                <option value="7">Cadereyta de Montes</option>
+                                <option value="8">Ezequiel Montes</option>
+                                <option value="9">Pedro Escobedo</option>
+                                <option value="10">Jalpan de Serra</option>
+                                <option value="11">Peñamiller</option>
+                                <option value="12">Amealco de Bonfil</option>
+                                <option value="13">Tolimán</option>
+                                <option value="14">Pinal de Amoles</option>
+                                <option value="15">San Joaquín</option>
+                                <option value="16">Arroyo Seco</option>
+                                <option value="17">Landa de Matamoros</option>
+                                <option value="18">Huimilpan</option>
+                            </select>
+                        </div>
+                        <button type="button" onclick="mostrarParte('parteCiudadEstadoDoctor', 'parteEspecialidadDoctor')">Siguiente</button>
+                    </div>
+
+                    <div class="Formulario parte-formulario" id="parteEspecialidadDoctor">
+                        <h1>Registro Doctor</h1>
+                        <div class="form-section">
+                            <label for="especialidad">Especialidad</label>
+                            <select id="especialidadDoctor" name="especialidad" required>
+                                <option value="1">Medicina del Sueño</option>
+                                <option value="2">Neurología</option>
+                                <option value="3">Psiquiatría</option>
+                                <option value="4">Medicina Interna</option>
+                                <option value="5">Neumología</option>
+                                <option value="6">Otorrinolaringología</option>
+                                <option value="7">Pediatría</option>
+                                <option value="8">Psicología Clínica</option>
+                                <option value="9">Endocrinología</option>
+                                <option value="10">Geriatría</option>
+                            </select>
+                        </div>
+                        <button type="button" onclick="mostrarParte('parteEspecialidadDoctor', 'parteContrasenaDoctor')">Siguiente</button>
+                    </div>
+
+                    <div class="Formulario parte-formulario" id="parteContrasenaDoctor">
+                        <h1>Registro Doctor</h1>
+                        <div class="form-section">
+                            <i class="fa-solid fa-lock"></i>
+                            <input type="password" name="contrasena" id="contrasenaDoctor" placeholder="Contraseña" required>
+                        </div>
+                        <button type="submit">Registrar Doctor</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="JS/burbujas.js"></script>
+</body>
+</html>
+

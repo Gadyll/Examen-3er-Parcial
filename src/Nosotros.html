@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/Nosotros.css"> 
+    <title>Nosotros</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="imagenes/logo.jpg" alt="Logo" />
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index2.html">Inicio</a></li>
+                    <li><a href="Nosotros.html">Nosotros</a></li>
+                    <li><a href="login.html">Iniciar sesión</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropbtn">¿Eres profesional de la salud?</a>
+                        <div class="dropdown-content">
+                            <a href="registro.html">Registrar gratis</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <div class="search-icon" onclick="toggleSearch()">
+                    <i class="fas fa-search"></i>
+                </div>
+                <div class="search-bar">
+                    <input type="text" id="searchInput" placeholder="Buscar especialistas..." oninput="buscarEspecialistas()">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Sonrisas Sleep</h1>
+            <p>Trabajamos con el propósito de servir como un puente entre personas que sufren de problemas del sueño y médicos capacitados en trastornos del sueño.</p>
+            <p>Buscamos proporcionar un recurso accesible y confiable para mejorar la salud del sueño y, por ende, la calidad de vida de sus usuarios.</p>
+        </div>
+    </div>
+
+    <div class="tabs">
+        <a href="#propósitoSection" class="tab" data-section="#propósitoSection">PROPÓSITO</a>
+        <a href="#misiónSection" class="tab" data-section="#misiónSection">MISIÓN</a>
+        <a href="#visiónSection" class="tab" data-section="#visiónSection">VISIÓN</a>
+        <a href="#valoresSection" class="tab" data-section="#valoresSection">VALORES</a>
+    </div>
+
+    <div class="info-sections">
+        <div id="propósitoSection" class="info-section">
+            <div class="info-image">
+                <img src="imagenes/proposito1.png" alt="Nuestra Tecnología">
+            </div>
+            <div class="info-text">
+                <h2>Propósito</h2>
+                <p>En Sonrisas Sleep, nuestro propósito es asegurar que todos tengan acceso a una atención médica de calidad. Trabajamos para eliminar barreras económicas y sociales, proporcionando soluciones efectivas para mejorar la salud del sueño y permitir que cada persona viva una vida más saludable.</p>
+            </div>
+        </div>
+        <div id="misiónSection" class="info-section">
+            <div class="info-image">
+                <img src="imagenes/mision1.png" alt="Nuestro Modelo">
+            </div>
+            <div class="info-text">
+                <h2>Misión</h2>
+                <p>Ofrecer apoyo en el cuidado del sueño, ayudando a las personas a gestionar su salud y su calidad de vida de manera efectiva.</p>
+            </div>
+        </div>
+        <div id="visiónSection" class="info-section">
+            <div class="info-image">
+                <img src="imagenes/vision1.png" alt="Nuestro Modelo">
+            </div>
+            <div class="info-text">
+                <h2>Visión</h2>
+                <p>Aspiramos a ser la referencia principal en salud del sueño en Latinoamérica, estableciendo estándares de excelencia en atención médica. Queremos ser reconocidos por ofrecer servicios innovadores y accesibles que mejoren la vida de las personas en toda la región.</p>
+            </div>
+        </div>
+        <div id="valoresSection" class="info-section">
+            <div class="info-image">
+                <img src="imagenes/valores1.jpg" alt="Nuestro Modelo">
+            </div>
+            <div class="info-text">
+                <h2>Valores</h2>
+                <p>Empatía: Comprendemos y valoramos las experiencias de nuestros pacientes para ofrecer un cuidado personalizado.</p>
+                <p>Colaboración: Trabajamos en equipo y con nuestros pacientes para lograr soluciones integrales.</p>
+                <p>Adaptabilidad: Nos ajustamos a los cambios y desafíos para ofrecer el mejor cuidado posible.</p>
+                <p>Humildad: Mantenemos una actitud abierta, aprendiendo y mejorando constantemente.</p>
+                <p>Integridad: Operamos con ética y honestidad, manteniendo la confianza y la calidad en nuestros servicios.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-block">
+                <h4>Contacto</h4>
+                <p>Dirección: Carretera Estatal 420 S/N, El Rosario, 76240, 76240 Santiago de Querétaro, Qro.</p>
+                <p>Teléfono: (442) 849 8477 </p>
+                <p>Email: sonrisasleep@gmail.com</p>
+            </div>
+            <div class="footer-block">
+                <h4>Redes Sociales</h4>
+                <p>Facebook: /sonrisasleep</p>
+                <p>Twitter: @sonrisasleep</p>
+                <p>Instagram: @sonrisasleep</p>
+            </div>
+            <div class="footer-block">
+                <h4>Horarios</h4>
+                <p>Lunes a Viernes: 9:00 AM - 6:00 PM</p>
+                <p>Sábado: 10:00 AM - 2:00 PM</p>
+                <p>Domingo: Cerrado</p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+        </div>
+    </footer>
+
+    <script src="JS/Nosotros.js"></script>
+</body>
+</html>
